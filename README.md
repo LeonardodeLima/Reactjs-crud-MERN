@@ -38,10 +38,9 @@ Axios: https://github.com/axios/axios
 ### server
 
 ```
- 1 cd Reactjs-crud-MERN 
- 2 cd api
- 3 npm install
- 4 npm run dev
+ 1 cd Reactjs-crud-MERN/api
+ 2 npm install
+ 3 npm run dev
  disponível: http://localhost:4000
 ```
 
@@ -50,7 +49,7 @@ Axios: https://github.com/axios/axios
 ```
  1 cd Reactjs-crud-MERN
  2 npm install
- 3 npm run dev
+ 3 npm run start
  disponível: http://localhost:3000
 ```
 
