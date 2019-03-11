@@ -4,8 +4,7 @@ import nota  from "./nota"
 import load from "./load"
 
 export default combineReducers({
-    error:error,
-    nota:nota,
-    load:load
+    error,
+    nota,
+    load
 })
-
