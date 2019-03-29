@@ -14,8 +14,8 @@ Express: https://expressjs.com
 
 Cors: https://github.com/expressjs/cors
 
-~Body-parser:https://www.npmjs.com/package/body-parser~
-> (Express 4.16.0 suporta express.jso() )
+~Body-parser~
+> (Express 4.16.0 suporta express.json() )
 
 Nodemon: https://github.com/remy/nodemon
 
