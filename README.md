@@ -41,7 +41,8 @@ Axios: https://github.com/axios/axios
 ```
  1 cd Reactjs-crud-MERN/api
  2 npm install
- 3 npm run dev
+ 3 crie o arquivo .env (baseado-se em .env.example)
+ 4 npm run dev
  disponível: http://localhost:4000
 ```
 
