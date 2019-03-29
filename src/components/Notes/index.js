@@ -37,7 +37,7 @@ class Notes extends React.Component {
 
   async componentDidMount() {
     await this.fetchNotes();
-    // console.log("index nota", this.props )
+    console.log("index nota", this.props )
   }
 
   static getDerivedStateFromProps = () => {
@@ -46,15 +46,19 @@ class Notes extends React.Component {
 
 
   fetchNotes = async () => {
+    
     this.props.dispatch(actionChangeLoad(true));
-    try {
+    
+    try {     
       const { data } = await axios.get('/nota/lista');
-      this.props.dispatch(actionChangeNota(data))
+      console.log("returned->", data);
+      this.props.dispatch(actionChangeNota(data.docs))
       this.props.dispatch(actionChangeLoad(false));
     } catch (error) {
       console.log(error)
       this.props.dispatch(actionChangeLoad(false));
     }
+    
   };
 
 

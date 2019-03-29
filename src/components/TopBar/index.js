@@ -137,22 +137,17 @@ class TopBar extends React.Component {
    
     const { value } = event.target
     
-    this.setState({
-      query: value
-     }, () => {
+    this.setState({ query: value }, () => {
         if (this.state.query && this.state.query.length > 1) {
-          if (this.state.query.length % 2 === 0) {
-            this.getSearch()
-          }
-        } 
+          if (this.state.query.length % 2 === 0) this.getSearch();
+        }
         else if (!this.state.query) {
           axios.get('/nota/lista').then(({data}) =>{
-            this.props.dispatch(actionChangeNota(data)) 
+              this.props.dispatch(actionChangeNota(data.docs)) 
           });
         }
       }
     )
-
   }
 
 
