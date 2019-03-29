@@ -14,6 +14,8 @@ Express: https://expressjs.com
 
 Cors: https://github.com/expressjs/cors
 
+Dotenv: https://github.com/motdotla/dotenv
+
 ~Body-parser~
 > (Express ˆ4.16.0 suporta express.json() )
 
@@ -41,7 +43,7 @@ Axios: https://github.com/axios/axios
 ```
  1 cd Reactjs-crud-MERN/api
  2 npm install
- 3 crie o arquivo .env (baseado-se em .env.example)
+ 3 crie o arquivo .env (baseando-se em .env.example)
  4 npm run dev
  disponível: http://localhost:4000
 ```
