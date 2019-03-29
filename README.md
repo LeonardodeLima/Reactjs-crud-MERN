@@ -1,5 +1,5 @@
 # Reactjs-crud-MERN
-[você pode verificar uma demo aqui](http://reactcrud-net.umbler.net/) 
+você pode verificar uma demo [aqui](http://reactcrud-net.umbler.net/) 
 
 Os seguintes módulos e ferramentas foram utilizados para o desenvolvimento da aplicação:
 
@@ -14,7 +14,8 @@ Express: https://expressjs.com
 
 Cors: https://github.com/expressjs/cors
 
-Body-parser:https://www.npmjs.com/package/body-parser
+~Body-parser:https://www.npmjs.com/package/body-parser~
+> (Express 4.16.0 suporta express.jso() )
 
 Nodemon: https://github.com/remy/nodemon
 
