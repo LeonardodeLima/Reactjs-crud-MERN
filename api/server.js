@@ -1,27 +1,32 @@
 const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-const cors = require('cors');
 const mongoose = require('mongoose');
+const cors = require('cors');
+const app = express();
+require('dotenv').config(); 
 
-const config = require('./configs/DB.js');
-const notaRoute = require('./routers/nota.route');
+const notaRoute = require('./src/routers/nota.route');
+   
+  const PORT = process.env.PORT || 4000;
+  const DATABASE = process.env.DATABASE_URL;
 
-      const PORT = 4000;
-
-      mongoose.Promise = global.Promise;
-      mongoose.connect(config.DB, { useNewUrlParser: true }).then(() => {
-        console.log('Database is connected') 
-      },err => { 
-        console.log('Can not connect to the database'+ err)}
-      );
+  mongoose.Promise = global.Promise;
+  mongoose.connect(DATABASE, { useNewUrlParser: true }).then( () => {
+    console.log('Database is connected');
+    }, err => { 
+    console.log("Can't connect to the database"+ err)}
+  );
 
 app.use(cors());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
-
+app.use(express.json());
 app.use('/nota', notaRoute);
 
-app.listen(PORT, function(){
-  console.log('Server is running on:', PORT);
+app.get('/', function(req, res, next) {
+  res.status(202).send({ status:"ON" });
+ return next();
+});
+
+app.listen(PORT, function(){ 
+    console.log('Server is running on:', PORT ); 
+  }).on('error', function(err) { 
+    console.log('Server is stopped, error:', err);
 });
